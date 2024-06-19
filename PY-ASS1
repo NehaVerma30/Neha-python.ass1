@@ -1,0 +1,317 @@
+Q.1
+# Write a program that takes two numbers as input and prints their sum
+a=int(input("Enter first number: "))
+b=int(input("Enter second number: "))
+sum=a+b
+print("The sum of the two number is: ",sum)
+
+Q.2
+# Write a python program that checks whether a given number is even or
+# odd.
+num=int(input("Enter a number: "))
+if(num%2==0):
+    print("The number is even")
+else:
+    print("The number is odd")
+
+Q.3
+# Write a python program that calculates the factorial of a given number
+num=int(input("Enter a number: "))
+fact=1
+for i in range(1,num+1):
+    fact=fact*i
+print(fact)
+
+Q.4
+# Write a program that asks the user for their name and then prints a
+# greeting message
+x=input("Enter your name: ")
+print("Hello ",x," Good Morning")
+
+Q.5
+# Write a program that takes a string input from the user and writes it to a
+# text file.
+import keyword
+text=input("Enter the text: ")
+file1=open("D:/myfile.txt","w")
+print(text,file=file1)
+
+Q.6
+# Write a program that reads the content of a text file and prints it to the
+# console.
+
+file1=open("D:/myfile.txt",'r')
+print(file1.read())
+
+
+Q.7
+# Write a python program that takes a string as input and returns its length.
+a=input("Enter text: ")
+n=len(a)
+print("The length of the given string is:",n)
+
+
+Q.8
+# Write a python program that concatenates two strings and returns the
+# result.
+x=input("Enter text: " )
+y=input("Enter text: ")
+z=x+y
+print("The concatenated string is ",z)
+
+
+Q.9
+# Write a python program that checks if a substring is present in a given
+# string.
+p=input("Enter text: ")
+q=input("Enter the substring:")
+if(q in p):
+    print("The Substring is present")
+else:
+    print("The Substring is not present")
+
+
+Q.10
+# Write a python program that converts a given string to uppercase
+x=input("Enter text: ")
+y=x.upper()
+print("The Uppercase text is ",y)
+
+
+Q.11
+# Write a python program that generates the first n numbers in the
+# Fibonacci sequence.
+n=int(input("Enter thr number: "))
+n1=0
+n2=1
+n3=n2
+print(n1)
+print(n2)
+for i in range(n):
+    print(n3)
+    n1,n2=n2,n3
+    n3=n1+n2
+
+
+Q.12
+# Write a python program that calculates the sum of the digits of a given
+# number.
+n=int(input("Enter a number: "))
+Sum=0
+while(True):
+    if((n/10)!=0):
+        digit=n%10
+        n=int(n/10)
+        Sum=Sum+digit
+
+    else:
+        print("The sum of the digits of the number is:",Sum)
+        break
+
+
+Q.13
+# Write a program that asks the user for their birth year and calculates their
+# age.
+import datetime
+y=int(input("Enter the birth date year:"))
+m=int(input("Enter the birth date month:"))
+d=int(input("Enter the birth date day:"))
+date=datetime.date(y,m,d)
+print("Your D.O.B:",date)
+today=datetime.date.today()
+print("Today's date:",today)
+age=today.year-date.year
+print("Age:",age)
+
+
+
+Q.14
+# Write a program that reads multiple lines of input from the user until they
+# enter an empty line, then prints all the lines.
+lines = []
+while True:
+  line = input()
+  if not line:
+    break
+  lines.append(line)
+
+for line in lines:
+  print(line)
+
+
+Q.15
+# Write a program that reads data from a CSV file and prints it to the
+# console
+import pandas as pd
+data=pd.read_csv("monthly sale.csv")
+print(data.to_string())
+
+
+
+Q.16
+# Write a program in python that counts the frequency of each character in
+# a string.
+a=input("Enter String:")
+L1=list(a)
+for i in L1:
+    print("Frequency of",i,":",L1.count(i))
+
+
+
+Q.17
+# Write a program in python that converts a given string to title case (first
+# letter of each word capitalized).
+d=input("Enter the Text:")
+caps=d.title()
+print("The capitalized text is:",caps)
+
+
+Q.18
+# Write a python program that checks if two strings are anagrams of each
+# other
+t1=input("Enter first string: ")
+t2=input("Enter second string: ")
+a=t1.lower()
+b=t2.lower()
+L1=set(a)
+L2=set(b)
+if(L1==L2):
+    print("The strings are anagrams")
+else:
+    print("The strings are not anagrams")
+
+
+Q.19
+# Write a python program that removes all punctuation from a given string
+punctuation = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+d=input("Enter the text: ")
+result=""
+for char in d:
+    if char not in punctuation:
+        result += char
+
+print(result)
+
+
+Q.20
+# Write a python program that takes a list of numbers and returns their sum.
+L1 = []
+n = int(input("Enter the number of elements in the list:"))
+for i in range(1,n+1):
+    print("Enter the ",i," element:")
+    ele=int(input())
+    L1.append(ele)
+print("List: ",L1)
+Sum = 0
+for i in L1:
+    Sum = Sum + i
+print("The Sum of elements of list:",Sum)
+
+# or print(sum(L1))
+
+
+Q.21
+# Write a python program that counts the occurrences of a specific element
+# in a list.
+L1 = []
+n = int(input("Enter the number of elements in the list:"))
+for i in range(1,n+1):
+    print("Enter the ",i," element:")
+    ele=(input())
+    L1.append(ele)
+print("List: ",L1)
+element=input("Enter the element to count the occurence:")
+count = 0
+for item in L1:
+    if item == element:
+        count += 1
+print(count)
+
+
+Q.22
+# Write a python program that returns the minimum and maximum values
+# in a list of numbers
+L1 = []
+n = int(input("Enter the number of elements in the list:"))
+for i in range(1,n+1):
+    print("Enter the ",i," element:")
+    ele=int(input())
+    L1.append(ele)
+print("List: ",L1)
+print("The maximum value is:",max(L1))
+print("The minimum value is:",min(L1))
+
+
+Q.23
+# Write a program that converts temperature from Celsius to Fahrenheit
+# and vice versa based on user input.
+temp=int(input("Enter the temperature in Fahrenheit or Celsius:"))
+ch=input("Enter F/C for above temperature:")
+if(ch=="F"):
+    C=((temp-32)*5)/9
+    print("The temperature in celsius:",C,"°C")
+elif(ch=="C"):
+    F=((temp*9)/5)+32
+    print("The temperature in Fahrenheit:",F,"°F")
+else:
+    print("Invalid temperature")
+
+
+
+Q.24
+# Write a program that acts as a simple calculator. It should take two
+# numbers and an operator (+, -, *, /) as input and print the result.
+n1=int(input("Enter first number:"))
+n2=int(input("Enter second number: "))
+op=input("Enter the operator:")
+if(op=="+"):
+    res=n1+n2
+    print(res)
+elif(op=="-"):
+    res=n1-n2
+    print(res)
+elif(op=="*"):
+    res=n1*n2
+    print(res)
+elif(op=="/"):
+    res=n1/n2
+    print(res)
+else:
+    print("Invalid operation")
+print(n1," ",op," ",n2," = ",res)
+
+
+Q.25
+# Write a program that copies the contents of one text file to another.
+file1=open("D:/myfile.txt",'r')
+c=file1.read()
+file2=open("D:/mynewtxtdata.txt","w")
+print(c,file=file2)
+
+
+
+Q.26
+# Write a program in python that checks if a string starts with a given prefix
+# or ends with a given suffix.
+text=input("Enter the text:")
+prefix=input("Enter the prefix to be checked:")
+suffix=input("Enter the suffix to be checked:")
+pre=text.startswith(prefix)
+suf=text.endswith(suffix)
+if pre==True:
+    print("The text has prefix",prefix)
+else:
+    print("The given prefix is not present")
+if suf==True:
+    print("The text has suffix",suffix)
+else:
+    print("The given suffix is not present")
+
+
+
+Q.27
+# Write a program in python that converts a string into a list of its characters
+a=input("Enter the text:")
+lst=list(a)
+print("The list of characters are: ",lst)
+
